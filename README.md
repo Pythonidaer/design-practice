@@ -19,6 +19,10 @@ We are developing our own website design approach: clear content, deliberate typ
 
 Read [AGENTS.md](AGENTS.md) before changing the website.
 
+## Reference features and adaptations
+
+[MUSCULOSKELETAL_DESIGN_ADAPTATIONS.md](MUSCULOSKELETAL_DESIGN_ADAPTATIONS.md) defines the features we adapted for Shore, their final timing and styling, and the reference features we identified separately. The adapted features are the primary record; Johnny accepted the current result provisionally.
+
 ## Preview
 
 Serve the `dist` directory with any static web server. No build or dependency installation is needed.
@@ -33,7 +37,7 @@ After editing `dist/index.html`, regenerate the root homepage:
 python3 scripts/sync-pages.py
 ```
 
-Commit the generated `index.html` with the source changes. Styles, scripts, and images are shared directly; they do not need duplicate copies at the root.
+Commit the generated `index.html` and served asset copies with the source changes. The generator copies `dist/style.css` to `dist/navigation-contact.css` and `dist/app.js` to `dist/navigation-v5.js`; those are the assets currently referenced by the page.
 
 The optional workflow in [.github/workflows/pages.yml](.github/workflows/pages.yml) can instead publish `dist/` directly if Pages Source is deliberately switched to GitHub Actions. Keep the current branch-based setup unless making that switch intentionally.
 
@@ -43,7 +47,9 @@ The repository is public. Design instructions are in [WEBSITE_DESIGN_BASELINE.md
 
 - Responsive photography portfolio with downloaded sample images.
 - Water and land filters and full-size photograph dialogs.
-- Right-side navigation drawer with independent scrolling and keyboard support.
+- Sticky frosted header, opaque mobile dropdown, and animated hamburger/X.
+- Scroll-triggered blur-and-rise reveals, staggered heading words, and delayed supporting content.
+- Black-and-white Contact action using the enquiry button geometry.
 - Enquiry preview only; nothing is submitted or saved.
 - Actual saved Johnny UI SVGs and profile.
 - Plain visible numbering: 1, 2, 3.
