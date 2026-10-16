@@ -31,3 +31,8 @@ header>.nav-links a[aria-current]{color:var(--ink)}
  header>.nav-links a{padding:12px 8px;border-radius:10px;font-size:16px;min-height:48px}
 }
 @media(prefers-reduced-motion:reduce){header>.nav-links,.nav-toggle span{transition:none}}
+
+/* Contact shares the form action dimensions, with monochrome contrast. */
+header>.nav-links a.nav-contact{background:#000;color:#fff;border:0;border-radius:0;padding:13px 24px;min-height:48px;font:inherit;font-size:17px;line-height:1.6;text-align:center;text-decoration:none}
+header>.nav-links a.nav-contact:hover{background:#292929;color:#fff}
+@media(max-width:1080px){header>.nav-links a.nav-contact{display:block;width:100%;margin-top:8px}}

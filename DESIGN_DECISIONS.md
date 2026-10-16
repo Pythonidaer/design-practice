@@ -53,3 +53,6 @@ Mobile screenshot correction: screenshot shows legacy image hamburger and unclas
 
 
 Dropdown readability: user reports translucent menu is hard to read. Match the reference dropdown with an opaque paper background and no backdrop filter on its surface; retain the existing frosted sticky header. This supersedes the earlier frosted-dropdown trial. Source check confirms only dropdown styling changed; mobile visual confirmation pending.
+
+
+Navigation contact action: user requested the reference menu contact button in black and white, otherwise matching the enquiry form action. Use a black background, white text, square corners, 13px/24px padding, 17px inherited typography, and 48px minimum height. Full-width on mobile and compact on desktop. This is a navigation link to the existing contact section, not a new submission action. Mobile visual review pending.
