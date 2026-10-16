@@ -6,5 +6,5 @@
 .reveal-text.is-in .word{opacity:1;transform:none;filter:blur(0)}
 .rise{opacity:0;transform:translateY(26px);filter:blur(4px);transition:opacity .9s var(--ease-out4),transform .9s var(--ease-out4),filter .9s var(--ease-out4);transition-delay:var(--reveal-delay,0ms)}
 .rise.is-in{opacity:1;transform:none;filter:blur(0)}
-.intro-note{--reveal-delay:180ms}
+.intro-note,.hero{--reveal-delay:900ms}
 @media(prefers-reduced-motion:reduce){header,#drawer,.backdrop,.rise,.reveal-text .word{transition:none}.rise,.reveal-text .word{opacity:1;transform:none;filter:none}}
