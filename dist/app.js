@@ -42,12 +42,12 @@ if(!motionPreference.matches && 'IntersectionObserver' in window){
       if(!entry.isIntersecting && entry.boundingClientRect.bottom>=0)return;
       entry.target.classList.add('is-in');revealObserver.unobserve(entry.target);
       if(entry.target.matches('.intro h1')){
-        document.querySelectorAll('.intro .location,.intro-note,.hero').forEach(el=>el.classList.add('is-in'));
+        document.querySelector('.intro .location').classList.add('is-in');
       }
     });
   },{threshold:.12,rootMargin:'0px 0px -60px 0px'});
   targets.forEach(el=>{
-    if(!el.matches('.intro .location,.intro-note,.hero'))revealObserver.observe(el);
+    if(!el.matches('.intro .location'))revealObserver.observe(el);
   });
   motionPreference.addEventListener('change',event=>{
     if(event.matches){targets.forEach(el=>el.classList.add('is-in'));revealObserver.disconnect()}
