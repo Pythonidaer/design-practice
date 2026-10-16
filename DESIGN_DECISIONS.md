@@ -37,3 +37,6 @@ User requested production review before updating the shared baseline. Shore now 
 
 
 Hero timing refinement: the label and word-staggered headline form the first entrance. The description/link and complete hero figure (image plus caption) share a second entrance with a 900ms delay, triggered by the headline so separate intersection events do not desynchronize the groups. This replaces the initial 180ms introduction delay for this page. Syntax and source checks passed; user visual review pending.
+
+
+Second-entrance correction: user reports that supporting copy/link remain visible instead of fading. Use explicit from/to keyframes with backwards fill for the delayed supporting group, avoiding reliance on a prior computed transition state. Version CSS/JS URLs to prevent stale cached assets from mixing implementations. Reduced motion and focus visibility remain immediate. Live browser computed states before this correction confirmed the elements had reveal classes and 900ms delays, but did not establish that their transitions played.
