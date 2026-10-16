@@ -28,3 +28,6 @@ User reported incomplete vertical coverage. Replaced the viewport-height surface
 
 ## Dialog focus spacing correction
 The supplied screenshot confirmed that the close button focus outline overlapped the photograph. Both dialogs now have a dedicated controls row with 16px of space before the content. The 3px outline and 5px offset are preserved, leaving 8px clearance from the following image. Markup and source checks passed; revised appearance has not been browser-verified.
+
+## GitHub Pages homepage
+The live root was rendering the README through Jekyll because the source homepage lived in dist/. Added a generated root index.html that presents Shore directly, using shared dist/ assets and .nojekyll. scripts/sync-pages.py owns root-entry generation. Photograph dialog asset URLs resolve relative to the loaded script, so both root and dist entry points work. README remains repository documentation. Source and HTTP delivery checks do not establish visual correctness.

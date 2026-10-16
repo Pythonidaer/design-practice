@@ -5,7 +5,7 @@ We are developing our own website design approach: clear content, deliberate typ
 ## Websites
 
 - ChatGPT Site: https://shore-photography-template.codefolio-work.chatgpt.site
-- GitHub Pages address after Pages is enabled: https://pythonidaer.github.io/design-practice/
+- GitHub Pages: https://pythonidaer.github.io/design-practice/
 
 ## Design rules
 
@@ -25,13 +25,19 @@ Serve the `dist` directory with any static web server. No build or dependency in
 
 ## GitHub Pages deployment
 
-The workflow in [.github/workflows/pages.yml](.github/workflows/pages.yml) publishes `dist/` on changes to website files on `main`, or when run manually.
+GitHub Pages currently publishes the `main` branch from the repository root. `index.html` is the Shore homepage and loads shared styles, scripts, and images from `dist/`. `.nojekyll` serves the static files directly. The README remains project documentation on GitHub.
 
-One-time repository setup: open Settings → Pages → Build and deployment → Source, and select **GitHub Actions**. Then run **Deploy design practice to GitHub Pages** from the Actions tab if the initial run happened before Pages was enabled.
+After editing `dist/index.html`, regenerate the root homepage:
 
-Settings: https://github.com/Pythonidaer/design-practice/settings/pages
+```sh
+python3 scripts/sync-pages.py
+```
 
-The repository stays private. Pages availability depends on the repository owner's GitHub plan and organization policy; a Pages publication may be publicly accessible independently of repository visibility. Do not put private content or secrets in `dist/`.
+Commit the generated `index.html` with the source changes. Styles, scripts, and images are shared directly; they do not need duplicate copies at the root.
+
+The optional workflow in [.github/workflows/pages.yml](.github/workflows/pages.yml) can instead publish `dist/` directly if Pages Source is deliberately switched to GitHub Actions. Keep the current branch-based setup unless making that switch intentionally.
+
+The repository is public. Design instructions are in [WEBSITE_DESIGN_BASELINE.md](WEBSITE_DESIGN_BASELINE.md).
 
 ## Current example
 
