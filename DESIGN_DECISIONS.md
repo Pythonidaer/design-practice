@@ -50,3 +50,6 @@ User requested replacing the drawer/hamburger with the musculoskeletal.ai patter
 
 
 Mobile screenshot correction: screenshot shows legacy image hamburger and unclassified desktop links, consistent with mixed page/assets. Both branch-based Pages and a push-triggered custom deploy were publishing different root layouts. Disable the redundant push-triggered workflow (manual use retained); branch-based Pages is the single automatic publisher. The rebuilt page references uniquely named navigation-v5.css/js rather than shared mutable asset names. Current production source was checked, but the screenshot does not establish the exact cache responsible. Safari user confirmation remains pending.
+
+
+Dropdown readability: user reports translucent menu is hard to read. Match the reference dropdown with an opaque paper background and no backdrop filter on its surface; retain the existing frosted sticky header. This supersedes the earlier frosted-dropdown trial. Source check confirms only dropdown styling changed; mobile visual confirmation pending.
