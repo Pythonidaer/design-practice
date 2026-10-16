@@ -40,3 +40,6 @@ Hero timing refinement: the label and word-staggered headline form the first ent
 
 
 Second-entrance correction: user reports that supporting copy/link remain visible instead of fading. Use explicit from/to keyframes with backwards fill for the delayed supporting group, avoiding reliance on a prior computed transition state. Version CSS/JS URLs to prevent stale cached assets from mixing implementations. Reduced motion and focus visibility remain immediate. Live browser computed states before this correction confirmed the elements had reveal classes and 900ms delays, but did not establish that their transitions played.
+
+
+Mobile correction: supporting copy/link and the complete photograph/caption now each use their own viewport-entry trigger. They retain the delayed second-stage animation, but no longer finish below the fold while the headline is visible. This supersedes the shared-headline trigger above. Mobile Safari visual confirmation remains pending.
