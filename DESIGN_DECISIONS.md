@@ -43,3 +43,7 @@ Second-entrance correction: user reports that supporting copy/link remain visibl
 
 
 Mobile correction: supporting copy/link and the complete photograph/caption now each use their own viewport-entry trigger. They retain the delayed second-stage animation, but no longer finish below the fold while the headline is visible. This supersedes the shared-headline trigger above. Mobile Safari visual confirmation remains pending.
+
+
+## Reference navigation rebuild
+User requested replacing the drawer/hamburger with the musculoskeletal.ai pattern. Shore now uses a 68px sticky frosted header, circular 40px three-line trigger that morphs to an X in 250ms, and full-width dropdown beneath the header through 1080px. Menu fades and travels 8px over 220ms with reference easing. This supersedes the full-height drawer and saved SVG menu geometry for this trial. Shared desktop/mobile links, Escape/outside dismissal, inert closed links, breakpoint reset, and reduced motion. Removed the old document-height overlay, focus trap, backdrop, scroll locks, and duplicate links. Syntax/source checks passed; mobile Safari visual verification pending.
